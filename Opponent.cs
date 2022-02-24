@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleCodeBreaker_ComputerCodeWriter
 {
-    public class ComputerOpponent
+    public class Opponent
     {
         public static int[] CodePegs = new int[] { 0, 0, 0, 0 };
 
@@ -18,6 +18,7 @@ namespace ConsoleCodeBreaker_ComputerCodeWriter
                 CodePegs[i] = pegGenerator.Next(5);
                 Console.Write("{0} ",CodePegs[i]);
             }
+            Console.WriteLine("\n\n");
         }
     }
 }

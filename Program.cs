@@ -13,6 +13,7 @@
 using System;
 using System.Collections.Generic;
 using ConsoleCodeBreaker_ComputerCodeWriter;
+using ConsoleCodeBreaker_Player;
 
 namespace ConsoleCodeBreaker
 {
@@ -20,7 +21,8 @@ namespace ConsoleCodeBreaker
     {
         static void Main()
         {
-            ComputerOpponent.PlacePegs();
+            Opponent.PlacePegs();
+            Player.PlacePegs();
         }
     }
 }
