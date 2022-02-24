@@ -1,4 +1,4 @@
-﻿/// <summary>
+﻿/// <remarks>
 /// 
 /// This application can be played in the console and is based on the game Mastermind.
 /// The Console App will have the computer render a code that is 4 colors randomly selected
@@ -8,4 +8,19 @@
 /// is a correct color in the correct position and White Marks means that there is a correct color
 /// in the incorrect position.
 /// 
-/// </summary>
+/// </remarks>
+
+using System;
+using System.Collections.Generic;
+using ConsoleCodeBreaker_ComputerCodeWriter;
+
+namespace ConsoleCodeBreaker
+{
+    public class Program
+    {
+        static void Main()
+        {
+            ComputerOpponent.PlacePegs();
+        }
+    }
+}
