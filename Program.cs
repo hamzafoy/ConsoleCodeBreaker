@@ -12,7 +12,7 @@
 
 using System;
 using System.Collections.Generic;
-using ConsoleCodeBreaker_ComputerCodeWriter;
+using ConsoleCodeBreaker_Opponent;
 using ConsoleCodeBreaker_Player;
 
 namespace ConsoleCodeBreaker

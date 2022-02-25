@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleCodeBreaker_ComputerCodeWriter
+namespace ConsoleCodeBreaker_Opponent
 {
     public class Opponent
     {
