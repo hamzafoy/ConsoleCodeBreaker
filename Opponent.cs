@@ -3,20 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ConsoleCodeBreaker_Pegboard;
 
 namespace ConsoleCodeBreaker_Opponent
 {
-    public class Opponent
+    public class OpponentPegboard : Pegboard
     {
-        public static int[] CodePegs = new int[] { 0, 0, 0, 0 };
-
-        public static void PlacePegs()
+        public override void PlacePegs()
         {
             Random pegGenerator = new Random();
-            for(int i = 0; i < CodePegs.Length; i++)
+            for(int i = 0; i < Pegs.Length; i++)
             {
-                CodePegs[i] = pegGenerator.Next(5);
-                Console.Write("{0} ",CodePegs[i]);
+                Pegs[i] = pegGenerator.Next(5);
+                Console.Write("{0} ",Pegs[i]);
             }
             Console.WriteLine("\n\n");
         }

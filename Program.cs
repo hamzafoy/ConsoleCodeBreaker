@@ -21,8 +21,10 @@ namespace ConsoleCodeBreaker
     {
         static void Main()
         {
-            Opponent.PlacePegs();
-            Player.PlacePegs();
+            OpponentPegboard opponent = new OpponentPegboard();
+            PlayerPegboard player = new PlayerPegboard();
+            opponent.PlacePegs();
+            player.PlacePegs();
         }
     }
 }
