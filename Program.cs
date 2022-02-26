@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using ConsoleCodeBreaker_Opponent;
 using ConsoleCodeBreaker_Player;
+using ConsoleCodeBreaker_GameConsole;
 
 namespace ConsoleCodeBreaker
 {
@@ -21,10 +22,8 @@ namespace ConsoleCodeBreaker
     {
         static void Main()
         {
-            OpponentPegboard opponent = new();
-            PlayerPegboard player = new();
-            opponent.PlacePegs();
-            player.PlacePegs();
+            GameConsole.opponent.PlacePegs();
+            GameConsole.player.PlacePegs();
         }
     }
 }
