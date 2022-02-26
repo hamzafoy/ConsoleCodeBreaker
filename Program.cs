@@ -22,6 +22,7 @@ namespace ConsoleCodeBreaker
     {
         static void Main()
         {
+            GameConsole.StartUp();
             GameConsole.opponent.PlacePegs();
             GameConsole.player.PlacePegs();
         }
