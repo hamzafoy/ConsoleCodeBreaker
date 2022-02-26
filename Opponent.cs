@@ -11,7 +11,7 @@ namespace ConsoleCodeBreaker_Opponent
     {
         public override void PlacePegs()
         {
-            Random pegGenerator = new Random();
+            Random pegGenerator = new();
             for(int i = 0; i < Pegs.Length; i++)
             {
                 Pegs[i] = pegGenerator.Next(5);
