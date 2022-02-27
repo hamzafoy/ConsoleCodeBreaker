@@ -8,7 +8,7 @@ namespace ConsoleCodeBreaker_Pegboard
 {
     public abstract class Pegboard
     {
-        protected int[] Pegs = new int[] { 0, 0, 0, 0};
+        public int[] Pegs = new int[] { 0, 0, 0, 0};
 
         public abstract void PlacePegs();
     }

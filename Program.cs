@@ -25,6 +25,7 @@ namespace ConsoleCodeBreaker
             GameConsole.StartUp();
             GameConsole.opponent.PlacePegs();
             GameConsole.player.PlacePegs();
+            GameConsole.CodeCheck(GameConsole.player, GameConsole.opponent);
         }
     }
 }
