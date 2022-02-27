@@ -50,6 +50,7 @@ namespace ConsoleCodeBreaker_GameConsole
                         break;
                 }
             }
+            Console.WriteLine($"{feedback[0]} {feedback[1]} {feedback[2]} {feedback[3]}");
         }
     }
 }
