@@ -31,6 +31,7 @@ namespace ConsoleCodeBreaker_GameConsole
                 switch(playersPegs.Pegs[i])
                 {
                     case 0:
+                        feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
                         feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
                         break;
                     case 1:
