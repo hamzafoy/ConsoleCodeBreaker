@@ -28,7 +28,7 @@ namespace ConsoleCodeBreaker_GameConsole
             string[] feedback = { "_", "_", "_", "_" };
             for (int i = 0; i < playersPegs.Pegs.Length; i++)
             {
-                switch(playersPegs.Pegs[i])
+                switch (playersPegs.Pegs[i])
                 {
                     case 0:
                         if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
