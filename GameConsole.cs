@@ -31,23 +31,63 @@ namespace ConsoleCodeBreaker_GameConsole
                 switch(playersPegs.Pegs[i])
                 {
                     case 0:
-                        feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
-                        feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
+                        if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                        {
+                            feedback[i] = "+";
+                        } else
+                        {
+                            feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
+                        }
                         break;
                     case 1:
-                        feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
+                        if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                        {
+                            feedback[i] = "+";
+                        }
+                        else
+                        {
+                            feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
+                        }
                         break;
                     case 2:
-                        feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
+                        if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                        {
+                            feedback[i] = "+";
+                        }
+                        else
+                        {
+                            feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
+                        }
                         break;
                     case 3:
-                        feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
+                        if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                        {
+                            feedback[i] = "+";
+                        }
+                        else
+                        {
+                            feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
+                        }
                         break;
                     case 4:
-                        feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
+                        if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                        {
+                            feedback[i] = "+";
+                        }
+                        else
+                        {
+                            feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
+                        }
                         break;
                     case 5:
-                        feedback[i] = (playersPegs.Pegs[i] == opponentsPegs.Pegs[i]) ? "+" : "_";
+                        if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                        {
+                            feedback[i] = "+";
+                        }
+                        else
+                        {
+                            feedback[i] = (Array.IndexOf(opponentsPegs.Pegs, playersPegs.Pegs[i]) == -1) ? "_" : "-";
+                        }
                         break;
                 }
             }
