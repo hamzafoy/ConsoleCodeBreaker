@@ -42,23 +42,20 @@ namespace ConsoleCodeBreaker_GameConsole
                     case 0:
                         if (Array.Exists(opponentsPegs.Pegs, element => element == 0))
                         {
-                            
-                            if(playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                            if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "+";
-                            } else if (!Array.Exists(opponentsPegs.Pegs, element => element == playersPegs.Pegs[i]))
+                            }
+                            else if (numOfPlayerColors[0] > numOfOpponentColors[0] && playersPegs.Pegs[i] != opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "_";
-                            } else
+                            }
+                            else if (numOfPlayerColors[0] <= numOfOpponentColors[0] && playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "x";
                             }
                         }
-                        else if (numOfOpponentColors[0] > 0)
-                        {
-                            numOfOpponentColors[0]--;
-                            feedback[i] = "x";
-                        } else
+                        else
                         {
                             feedback[i] = "_";
                         }
@@ -66,24 +63,18 @@ namespace ConsoleCodeBreaker_GameConsole
                     case 1:
                         if (Array.Exists(opponentsPegs.Pegs, element => element == 1))
                         {
-                            numOfOpponentColors[1]--;
                             if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "+";
                             }
-                            else if (!Array.Exists(opponentsPegs.Pegs, element => element == playersPegs.Pegs[i]))
+                            else if (numOfPlayerColors[1] > numOfOpponentColors[1] && playersPegs.Pegs[i] != opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "_";
                             }
-                            else
+                            else if (numOfPlayerColors[1] <= numOfOpponentColors[1])
                             {
                                 feedback[i] = "x";
                             }
-                        }
-                        else if (numOfOpponentColors[1] > 0)
-                        {
-                            numOfOpponentColors[1]--;
-                            feedback[i] = "x";
                         }
                         else
                         {
@@ -91,26 +82,20 @@ namespace ConsoleCodeBreaker_GameConsole
                         }
                         break;
                     case 2:
-                        if (Array.Exists(opponentsPegs.Pegs, element => element == 2) && numOfOpponentColors[2] >= 0)
+                        if (Array.Exists(opponentsPegs.Pegs, element => element == 2))
                         {
-                            numOfOpponentColors[2]--;
                             if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "+";
                             }
-                            else if (!Array.Exists(opponentsPegs.Pegs, element => element == playersPegs.Pegs[i]))
+                            else if (numOfPlayerColors[2] > numOfOpponentColors[2] && playersPegs.Pegs[i] != opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "_";
                             }
-                            else
+                            else if (numOfPlayerColors[2] <= numOfOpponentColors[2])
                             {
                                 feedback[i] = "x";
                             }
-                        }
-                        else if (numOfOpponentColors[2] > 0)
-                        {
-                            numOfOpponentColors[2]--;
-                            feedback[i] = "x";
                         }
                         else
                         {
@@ -118,26 +103,20 @@ namespace ConsoleCodeBreaker_GameConsole
                         }
                         break;
                     case 3:
-                        if (Array.Exists(opponentsPegs.Pegs, element => element == 3) && numOfOpponentColors[3] >= 0)
+                        if (Array.Exists(opponentsPegs.Pegs, element => element == 3))
                         {
-                            numOfOpponentColors[3]--;
                             if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "+";
                             }
-                            else if (!Array.Exists(opponentsPegs.Pegs, element => element == playersPegs.Pegs[i]))
+                            else if (numOfPlayerColors[3] > numOfOpponentColors[3] && playersPegs.Pegs[i] != opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "_";
                             }
-                            else
+                            else if (numOfPlayerColors[3] <= numOfOpponentColors[3])
                             {
                                 feedback[i] = "x";
                             }
-                        }
-                        else if (numOfOpponentColors[3] > 0)
-                        {
-                            numOfOpponentColors[3]--;
-                            feedback[i] = "x";
                         }
                         else
                         {
@@ -145,26 +124,20 @@ namespace ConsoleCodeBreaker_GameConsole
                         }
                         break;
                     case 4:
-                        if (Array.Exists(opponentsPegs.Pegs, element => element == 4) && numOfOpponentColors[4] >= 0)
+                        if (Array.Exists(opponentsPegs.Pegs, element => element == 4))
                         {
-                            numOfOpponentColors[4]--;
                             if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "+";
                             }
-                            else if (!Array.Exists(opponentsPegs.Pegs, element => element == playersPegs.Pegs[i]))
+                            else if (numOfPlayerColors[4] > numOfOpponentColors[4] && playersPegs.Pegs[i] != opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "_";
                             }
-                            else
+                            else if (numOfPlayerColors[4] <= numOfOpponentColors[4])
                             {
                                 feedback[i] = "x";
                             }
-                        }
-                        else if (numOfOpponentColors[4] > 0)
-                        {
-                            numOfOpponentColors[4]--;
-                            feedback[i] = "x";
                         }
                         else
                         {
@@ -172,26 +145,20 @@ namespace ConsoleCodeBreaker_GameConsole
                         }
                         break;
                     case 5:
-                        if (Array.Exists(opponentsPegs.Pegs, element => element == 5) && numOfOpponentColors[5] >= 0)
+                        if (Array.Exists(opponentsPegs.Pegs, element => element == 5))
                         {
-                            numOfOpponentColors[5]--;
                             if (playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "+";
                             }
-                            else if (!Array.Exists(opponentsPegs.Pegs, element => element == playersPegs.Pegs[i]))
+                            else if (numOfPlayerColors[5] > numOfOpponentColors[5] && playersPegs.Pegs[i] != opponentsPegs.Pegs[i])
                             {
                                 feedback[i] = "_";
                             }
-                            else
+                            else if (numOfPlayerColors[5] <= numOfOpponentColors[5])
                             {
                                 feedback[i] = "x";
                             }
-                        }
-                        else if (numOfOpponentColors[5] > 0)
-                        {
-                            numOfOpponentColors[5]--;
-                            feedback[i] = "x";
                         }
                         else
                         {
