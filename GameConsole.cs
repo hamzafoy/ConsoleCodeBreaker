@@ -14,17 +14,18 @@ namespace ConsoleCodeBreaker_GameConsole
         public static OpponentPegboard opponent = new();
         public static PlayerPegboard player = new();
         public static string Name = "Console Mastermind";
-        public static string Description = "This game is based on the popular board\ngame Mastermind.";
+        public static string Description = "This game is based on the popular\nboard game Mastermind.";
 
         public static void StartUp()
         {
-            Console.WriteLine($"|~~~~~~~~| :: {Name} :: |~~~~~~~~|");
+            Console.WriteLine($"|****| :: {Name} :: |****|\n");
             Console.WriteLine($"{Description}\n");
         }
 
         public static void CodeCheck(PlayerPegboard playersPegs, OpponentPegboard opponentsPegs)
         {
-            Console.WriteLine("|********| :: Feedback :: |********|");
+            Console.WriteLine("|**********| :: Feedback :: |********|\n");
+            Console.WriteLine("+ indicates right color/right position\nx indicates right color/wrong position\n_ indicates wrong color/wrong position");
             string[] feedback = { "_", "_", "_", "_" };
             int[] numOfOpponentColors = new int[6];
             int[] numOfPlayerColors = new int[6];
@@ -33,8 +34,8 @@ namespace ConsoleCodeBreaker_GameConsole
                 numOfOpponentColors[i] = Array.FindAll(opponentsPegs.Pegs, element => element == i).Length;
                 numOfPlayerColors[i] = Array.FindAll(playersPegs.Pegs, element => element == i).Length;
             }
-            Console.WriteLine($"Player has {numOfPlayerColors[0]} 0s, {numOfPlayerColors[1]} 1s, {numOfPlayerColors[2]} 2s, {numOfPlayerColors[3]} 3s, {numOfPlayerColors[4]} 4s, {numOfPlayerColors[5]} 5s");
-            Console.WriteLine($"Opponent has {numOfOpponentColors[0]} 0s, {numOfOpponentColors[1]} 1s, {numOfOpponentColors[2]} 2s, {numOfOpponentColors[3]} 3s, {numOfOpponentColors[4]} 4s, {numOfOpponentColors[5]} 5s");
+            //Console.WriteLine($"Player has {numOfPlayerColors[0]} 0s, {numOfPlayerColors[1]} 1s, {numOfPlayerColors[2]} 2s, {numOfPlayerColors[3]} 3s, {numOfPlayerColors[4]} 4s, {numOfPlayerColors[5]} 5s");
+            //Console.WriteLine($"Opponent has {numOfOpponentColors[0]} 0s, {numOfOpponentColors[1]} 1s, {numOfOpponentColors[2]} 2s, {numOfOpponentColors[3]} 3s, {numOfOpponentColors[4]} 4s, {numOfOpponentColors[5]} 5s");
             for (int i = 0; i < playersPegs.Pegs.Length; i++)
             {
                 switch (playersPegs.Pegs[i])
