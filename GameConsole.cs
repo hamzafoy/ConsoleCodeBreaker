@@ -10,7 +10,7 @@ namespace ConsoleCodeBreaker_GameConsole
 {
     public class GameConsole
     {
-        public static List<int[]> ConsoleFeedback = new();
+        public static List<string[]> ConsoleFeedback = new();
         public static OpponentPegboard opponent = new();
         public static PlayerPegboard player = new();
         public static string Name = "Console Mastermind";
@@ -34,8 +34,8 @@ namespace ConsoleCodeBreaker_GameConsole
                 numOfOpponentColors[i] = Array.FindAll(opponentsPegs.Pegs, element => element == i).Length;
                 numOfPlayerColors[i] = Array.FindAll(playersPegs.Pegs, element => element == i).Length;
             }
-            //Console.WriteLine($"Player has {numOfPlayerColors[0]} 0s, {numOfPlayerColors[1]} 1s, {numOfPlayerColors[2]} 2s, {numOfPlayerColors[3]} 3s, {numOfPlayerColors[4]} 4s, {numOfPlayerColors[5]} 5s");
-            //Console.WriteLine($"Opponent has {numOfOpponentColors[0]} 0s, {numOfOpponentColors[1]} 1s, {numOfOpponentColors[2]} 2s, {numOfOpponentColors[3]} 3s, {numOfOpponentColors[4]} 4s, {numOfOpponentColors[5]} 5s");
+            Console.WriteLine($"Player has {numOfPlayerColors[0]} 0s, {numOfPlayerColors[1]} 1s, {numOfPlayerColors[2]} 2s, {numOfPlayerColors[3]} 3s, {numOfPlayerColors[4]} 4s, {numOfPlayerColors[5]} 5s");
+            Console.WriteLine($"Opponent has {numOfOpponentColors[0]} 0s, {numOfOpponentColors[1]} 1s, {numOfOpponentColors[2]} 2s, {numOfOpponentColors[3]} 3s, {numOfOpponentColors[4]} 4s, {numOfOpponentColors[5]} 5s");
             for (int i = 0; i < playersPegs.Pegs.Length; i++)
             {
                 switch (playersPegs.Pegs[i])
@@ -51,7 +51,7 @@ namespace ConsoleCodeBreaker_GameConsole
                             {
                                 feedback[i] = "_";
                             }
-                            else if (numOfPlayerColors[0] <= numOfOpponentColors[0] && playersPegs.Pegs[i] == opponentsPegs.Pegs[i])
+                            else if (numOfPlayerColors[0] <= numOfOpponentColors[0])
                             {
                                 feedback[i] = "x";
                             }
