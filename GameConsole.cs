@@ -44,16 +44,20 @@ namespace ConsoleCodeBreaker_GameConsole
         public static void StartUp()
         {
             Console.WriteLine($"|******************************************************|");
-            Console.WriteLine($"|*****************| :: |********| :: |*****************|");
+            Console.WriteLine($"|*************|                          |*************|");
             Console.WriteLine($"|*************| :: Console Mastermind :: |*************|");
-            Console.WriteLine($"|*****************| :: |********| :: |*****************|");
+            Console.WriteLine($"|*************|                          |*************|");
             Console.WriteLine($"|******************************************************|\n");
             Console.WriteLine($"{Description}\n");
         }
 
         public static void CodeCheck(PlayerPegboard playersPegs, OpponentPegboard opponentsPegs)
         {
-            Console.WriteLine("|***************| :: Feedback :: |***************|\n");
+            Console.WriteLine($"|******************************************************|");
+            Console.WriteLine($"|***************|                      |***************|");
+            Console.WriteLine($"|***************|    :: Feedback ::    |***************|");
+            Console.WriteLine($"|***************|                      |***************|");
+            Console.WriteLine($"|******************************************************|\n");
             Console.WriteLine("+ indicates right color/right position\nx indicates right color/wrong position\n_ indicates wrong color/wrong position\n");
             string[] feedback = { "_", "_", "_", "_" };
             int[] numOfOpponentColors = new int[6];
