@@ -201,7 +201,7 @@ namespace ConsoleCodeBreaker_GameConsole
                         break;
                 }
             }
-            Console.WriteLine($"Your opponent responds with the \nfollowing feedback: {feedback[0]} {feedback[1]} {feedback[2]} {feedback[3]}\n");
+            Console.WriteLine($"Your opponent responds with the following feedback: \n{feedback[0]} {feedback[1]} {feedback[2]} {feedback[3]}\n");
         }
     }
 }
