@@ -20,8 +20,19 @@ namespace ConsoleCodeBreaker_GameConsole
         {
             Console.WriteLine("Game starting up now. . .");
             StartUp();
-            player.PlacePegs();
-            CodeCheck(player, opponent);
+            string userInput = null;
+            do
+            {
+                Console.Write("Enter P to play, enter Q to quit ");
+                userInput = Console.ReadLine();
+                if(userInput == "Q" || userInput == "q")
+                {
+                    Console.WriteLine("You have opted to exit the program. . . Goodbye!");
+                    break;
+                }
+                player.PlacePegs();
+                CodeCheck(player, opponent);
+            } while (userInput != "Q" || userInput != "q");
         }
         public static void StartUp()
         {
