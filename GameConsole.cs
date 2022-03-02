@@ -16,6 +16,13 @@ namespace ConsoleCodeBreaker_GameConsole
         public static string Name = "Console Mastermind";
         public static string Description = "This game is based on the popular\nboard game Mastermind.";
 
+        public static void PlayGame()
+        {
+            Console.WriteLine("Game starting up now. . .");
+            StartUp();
+            player.PlacePegs();
+            CodeCheck(player, opponent);
+        }
         public static void StartUp()
         {
             Console.WriteLine($"|****| :: {Name} :: |****|\n");
