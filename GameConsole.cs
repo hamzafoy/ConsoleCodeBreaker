@@ -23,15 +23,22 @@ namespace ConsoleCodeBreaker_GameConsole
             string userInput = null;
             do
             {
-                Console.Write("Enter P to play, enter Q to quit ");
-                userInput = Console.ReadLine();
-                if(userInput == "Q" || userInput == "q")
+                Console.Write("Enter P to play, enter Q to quit: ");
+                userInput = Console.ReadLine().ToUpper();
+                switch(userInput)
                 {
-                    Console.WriteLine("You have opted to exit the program. . . Goodbye!");
+                    case "Q":
+                        Console.WriteLine("You have opted to exit the program. . . Goodbye!");
+                        break;
+                    case "P":
+                        player.PlacePegs();
+                        CodeCheck(player, opponent);
+                        break;
+                }
+                if (userInput == "Q" || userInput == "q")
+                {
                     break;
                 }
-                player.PlacePegs();
-                CodeCheck(player, opponent);
             } while (userInput != "Q" || userInput != "q");
         }
         public static void StartUp()

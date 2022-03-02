@@ -22,6 +22,8 @@ namespace ConsoleCodeBreaker
     {
         static void Main()
         {
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.Title = "Console Mastermind - A Code Louisville Capstone";
             GameConsole.opponent.PlacePegs();
             GameConsole.PlayGame();
         }
