@@ -10,7 +10,7 @@ namespace ConsoleCodeBreaker_GameConsole
 {
     public class GameConsole
     {
-        public static List<string[]> ConsoleFeedback = new();
+        //public static List<string[]> ConsoleFeedback = new();
         public static OpponentPegboard opponent = new();
         public static PlayerPegboard player = new();
         public static string Name = "Console Mastermind";
@@ -201,7 +201,12 @@ namespace ConsoleCodeBreaker_GameConsole
                         break;
                 }
             }
-            Console.WriteLine($"Your opponent responds with the following feedback: \n{feedback[0]} {feedback[1]} {feedback[2]} {feedback[3]}\n");
+            //Console.WriteLine($"Your opponent responds with the following feedback: \n{feedback[0]} {feedback[1]} {feedback[2]} {feedback[3]}\n");
+            opponent.Feedback.Add(feedback);
+            foreach (string[] elementArray in opponent.Feedback)
+            {
+                Console.WriteLine($"Your opponent responds with the following feedback: \n{elementArray[0]} {elementArray[1]} {elementArray[2]} {elementArray[3]}\n");
+            }
         }
     }
 }

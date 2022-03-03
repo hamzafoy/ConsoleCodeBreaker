@@ -9,6 +9,7 @@ namespace ConsoleCodeBreaker_Opponent
 {
     public class OpponentPegboard : Pegboard
     {
+        public List<string[]> Feedback = new List<string[]>();
         public override void PlacePegs()
         {
             Random pegGenerator = new();
