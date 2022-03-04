@@ -44,6 +44,12 @@ namespace ConsoleCodeBreaker_GameConsole
                         Console.SetCursorPosition(0, 8);
                         Console.SetWindowPosition(0, 0);
                         break;
+                    case "V":
+                        foreach(int[] i in player.GuessList)
+                        {
+                            Console.WriteLine($"{i[0]}, {i[1]}, {i[2]}, {i[3]}");
+                        }
+                        break;
                     default:
                         Console.WriteLine("This input is not accepted. Try again and follow the prompt");
                         break;
