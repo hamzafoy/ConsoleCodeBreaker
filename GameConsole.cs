@@ -34,6 +34,9 @@ namespace ConsoleCodeBreaker_GameConsole
                         player.PlacePegs();
                         CodeCheck(player, opponent);
                         break;
+                    default:
+                        Console.WriteLine("This input is not accepted. Try again and follow the prompt");
+                        break;
                 }
                 if (userInput == "Q" || userInput == "q")
                 {
@@ -207,6 +210,8 @@ namespace ConsoleCodeBreaker_GameConsole
             {
                 Console.WriteLine($"Your opponent responds with the following feedback: \n{elementArray[0]} {elementArray[1]} {elementArray[2]} {elementArray[3]}\n");
             }
+            //Console.WriteLine(Console.CursorTop);
+            
         }
     }
 }
