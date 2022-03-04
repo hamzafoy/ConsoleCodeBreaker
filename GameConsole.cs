@@ -23,7 +23,7 @@ namespace ConsoleCodeBreaker_GameConsole
             string userInput = null;
             do
             {
-                Console.Write("Enter P to play, enter Q to quit: ");
+                Console.Write("Enter P to play, enter C to erase \nthe console & keep playing, enter Q to quit: ");
                 userInput = Console.ReadLine().ToUpper();
                 switch(userInput)
                 {
@@ -33,6 +33,16 @@ namespace ConsoleCodeBreaker_GameConsole
                     case "P":
                         player.PlacePegs();
                         CodeCheck(player, opponent);
+                        break;
+                    case "C":
+                        //Console.WriteLine(Console.CursorTop);
+                        for (int i = Console.CursorTop; i >= 8; i--)
+                        {
+                            Console.SetCursorPosition(0, i);
+                            Console.WriteLine(new String(' ', Console.WindowWidth));
+                        }
+                        Console.SetCursorPosition(0, 8);
+                        Console.SetWindowPosition(0, 0);
                         break;
                     default:
                         Console.WriteLine("This input is not accepted. Try again and follow the prompt");

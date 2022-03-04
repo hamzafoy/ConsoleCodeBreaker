@@ -11,7 +11,7 @@ namespace ConsoleCodeBreaker_Player
     {
         public override void PlacePegs()
         {
-            Console.WriteLine("\nYou will need to 'place' your guesses one at a time");
+            Console.WriteLine("\nYou will need to 'place' your guesses one at a time.\n");
             for(int i = 0; i < Pegs.Length; i++)
             {
                 string userInput = Console.ReadLine();
