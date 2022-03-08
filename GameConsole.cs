@@ -22,6 +22,11 @@ namespace ConsoleCodeBreaker_GameConsole
             string userInput = null;
             do
             {
+                if (opponent.Feedback.Count > 0 && opponent.Feedback[opponent.Feedback.Count - 1][0] == "+" && opponent.Feedback[opponent.Feedback.Count - 1][1] == "+" && opponent.Feedback[opponent.Feedback.Count - 1][2] == "+" && opponent.Feedback[opponent.Feedback.Count - 1][3] == "+")
+                {
+                    Console.WriteLine("You have successfully guessed the correct numbers and positions of said numbers! Good Job! \nGame closing. . .");
+                    break;
+                }
                 Console.Write("Enter P to play, enter C to erase \nthe console & keep playing, enter V to view \nyour previous guesses, & enter Q to quit: ");
                 userInput = Console.ReadLine().ToUpper();
                 switch(userInput)
