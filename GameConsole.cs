@@ -15,7 +15,7 @@ namespace ConsoleCodeBreaker_GameConsole
         public static string Name = "Console Mastermind";
         public static string Description = "This game is based on the popular board game Mastermind.";
         public static string GameplayPrimer = @"The opponent is the computer which will decide on a row 
-of 4 code-pegs which can be any number between 0 to 5. 
+of 4 code-pegs which can be any number between 0 to 4. 
 You will need to guess the code by guessing an 
 assortment of 4 numbers between 0 to 5. You will get 
 feedback that will inform you if you've guessed a 
@@ -25,7 +25,6 @@ correct code that the opponent made.";
 
         public static void PlayGame()
         {
-            //Console.WriteLine("Game starting up now. . .");
             StartUp();
             string userInput = null;
             do
@@ -53,7 +52,6 @@ correct code that the opponent made.";
                         CodeCheck(player, opponent);
                         break;
                     case "C":
-                        //Console.WriteLine(Console.CursorTop);
                         for (int i = Console.CursorTop; i >= 8; i--)
                         {
                             Console.SetCursorPosition(0, i);
@@ -71,12 +69,6 @@ correct code that the opponent made.";
                             Console.WriteLine($"Feedback Returned: {opponent.Feedback[i][0]} {opponent.Feedback[i][1]} {opponent.Feedback[i][2]} {opponent.Feedback[i][3]}\n");
                             guessCount++;
                         }
-                        //foreach (int[] i in player.GuessLog)
-                        //{
-                        //    Console.WriteLine("\nThe following is a list of your guesses:");
-                        //    Console.WriteLine($" Guess #{guessCount}: {i[0]} {i[1]} {i[2]} {i[3]}\n");
-                        //    guessCount++;
-                        //}
                         break;
                     default:
                         Console.WriteLine("This input is not accepted. Try again and follow the prompt");
