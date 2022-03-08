@@ -27,6 +27,11 @@ namespace ConsoleCodeBreaker_GameConsole
                     Console.WriteLine("You have successfully guessed the correct numbers and positions of said numbers! Good Job! \nGame closing. . .");
                     break;
                 }
+                if (player.GuessLog.Count == 10)
+                {
+                    Console.WriteLine("You have played 10 guesses and failed to crack the code. You Lose! \nGame closing. . .");
+                    break;
+                }
                 Console.Write("Enter P to play, enter C to erase \nthe console & keep playing, enter V to view \nyour previous guesses, & enter Q to quit: ");
                 userInput = Console.ReadLine().ToUpper();
                 switch(userInput)
