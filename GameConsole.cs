@@ -46,12 +46,19 @@ namespace ConsoleCodeBreaker_GameConsole
                         break;
                     case "V":
                         int guessCount = 1;
-                        foreach (int[] i in player.GuessLog)
+                        for (int i = 0; i < player.GuessLog.Count; i++)
                         {
                             Console.WriteLine("\nThe following is a list of your guesses:");
-                            Console.WriteLine($" Guess #{guessCount}: {i[0]} {i[1]} {i[2]} {i[3]}\n");
+                            Console.WriteLine($"Guess #{guessCount}: {player.GuessLog[i][0]} {player.GuessLog[i][1]} {player.GuessLog[i][2]} {player.GuessLog[i][3]}");
+                            Console.WriteLine($"Your opponent responded with the following feedback: \n{opponent.Feedback[i][0]} {opponent.Feedback[i][1]} {opponent.Feedback[i][2]} {opponent.Feedback[i][3]}\n");
                             guessCount++;
                         }
+                        //foreach (int[] i in player.GuessLog)
+                        //{
+                        //    Console.WriteLine("\nThe following is a list of your guesses:");
+                        //    Console.WriteLine($" Guess #{guessCount}: {i[0]} {i[1]} {i[2]} {i[3]}\n");
+                        //    guessCount++;
+                        //}
                         break;
                     default:
                         Console.WriteLine("This input is not accepted. Try again and follow the prompt");
@@ -223,15 +230,8 @@ namespace ConsoleCodeBreaker_GameConsole
                         break;
                 }
             }
-            //Console.WriteLine($"Your opponent responds with the following feedback: \n{feedback[0]} {feedback[1]} {feedback[2]} {feedback[3]}\n");
             opponent.Feedback.Add(feedback);
-            
-            foreach (string[] elementArray in opponent.Feedback)
-            {
-                Console.WriteLine($"Your opponent responds with the following feedback: \n{elementArray[0]} {elementArray[1]} {elementArray[2]} {elementArray[3]}\n");
-            }
-            //Console.WriteLine(Console.CursorTop);
-            
+            Console.WriteLine($"Your opponent responds with the following feedback: \n{opponent.Feedback[opponent.Feedback.Count - 1][0]} {opponent.Feedback[opponent.Feedback.Count - 1][1]} {opponent.Feedback[opponent.Feedback.Count - 1][2]} {opponent.Feedback[opponent.Feedback.Count - 1][3]}\n");
         }
     }
 }
