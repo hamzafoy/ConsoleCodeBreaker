@@ -14,6 +14,14 @@ namespace ConsoleCodeBreaker_GameConsole
         public static PlayerPegboard player = new();
         public static string Name = "Console Mastermind";
         public static string Description = "This game is based on the popular board game Mastermind.";
+        public static string GameplayPrimer = @"The opponent is the computer which will decide on a row 
+of 4 code-pegs which can be any number between 0 to 5. 
+You will need to guess the code by guessing an 
+assortment of 4 numbers between 0 to 5. You will get 
+feedback that will inform you if you've guessed a 
+correct number or position of guessed number. Use 
+the provided feedback to logically discern the 
+correct code that the opponent made.";
 
         public static void PlayGame()
         {
@@ -60,7 +68,7 @@ namespace ConsoleCodeBreaker_GameConsole
                         {
                             Console.WriteLine("\nThe following is a list of your guesses:");
                             Console.WriteLine($"Guess #{guessCount}: {player.GuessLog[i][0]} {player.GuessLog[i][1]} {player.GuessLog[i][2]} {player.GuessLog[i][3]}");
-                            Console.WriteLine($"Your opponent responded with the following feedback: \n{opponent.Feedback[i][0]} {opponent.Feedback[i][1]} {opponent.Feedback[i][2]} {opponent.Feedback[i][3]}\n");
+                            Console.WriteLine($"Feedback Returned: {opponent.Feedback[i][0]} {opponent.Feedback[i][1]} {opponent.Feedback[i][2]} {opponent.Feedback[i][3]}\n");
                             guessCount++;
                         }
                         //foreach (int[] i in player.GuessLog)
@@ -88,6 +96,7 @@ namespace ConsoleCodeBreaker_GameConsole
             Console.WriteLine($"|*************|                          |*************|");
             Console.WriteLine($"|******************************************************|\n");
             Console.WriteLine($"{Description}\n");
+            Console.WriteLine($"{GameplayPrimer}\n");
         }
 
         public static void CodeCheck(PlayerPegboard playersPegs, OpponentPegboard opponentsPegs)
