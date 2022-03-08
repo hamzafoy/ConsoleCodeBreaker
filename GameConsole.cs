@@ -10,12 +10,10 @@ namespace ConsoleCodeBreaker_GameConsole
 {
     public class GameConsole
     {
-        //public static List<string[]> ConsoleFeedback = new();
         public static OpponentPegboard opponent = new();
         public static PlayerPegboard player = new();
         public static string Name = "Console Mastermind";
         public static string Description = "This game is based on the popular board game Mastermind.";
-        public static List<int[]> GuessList = new List<int[]>();
 
         public static void PlayGame()
         {
@@ -33,6 +31,7 @@ namespace ConsoleCodeBreaker_GameConsole
                         break;
                     case "P":
                         player.PlacePegs();
+                        
                         CodeCheck(player, opponent);
                         break;
                     case "C":
@@ -46,7 +45,13 @@ namespace ConsoleCodeBreaker_GameConsole
                         Console.SetWindowPosition(0, 0);
                         break;
                     case "V":
-                        
+                        int guessCount = 1;
+                        foreach (int[] i in player.GuessLog)
+                        {
+                            Console.WriteLine("The following is a list of your guesses:");
+                            Console.WriteLine($" Guess #{guessCount}: {i[0]} {i[1]} {i[2]} {i[3]}");
+                            guessCount++;
+                        }
                         break;
                     default:
                         Console.WriteLine("This input is not accepted. Try again and follow the prompt");
