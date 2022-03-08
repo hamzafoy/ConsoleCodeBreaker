@@ -22,7 +22,7 @@ namespace ConsoleCodeBreaker_GameConsole
             string userInput = null;
             do
             {
-                Console.Write("Enter P to play, enter C to erase \nthe console & keep playing, enter Q to quit: ");
+                Console.Write("Enter P to play, enter C to erase \nthe console & keep playing, enter V to view \nyour previous guesses, & enter Q to quit: ");
                 userInput = Console.ReadLine().ToUpper();
                 switch(userInput)
                 {
@@ -48,8 +48,8 @@ namespace ConsoleCodeBreaker_GameConsole
                         int guessCount = 1;
                         foreach (int[] i in player.GuessLog)
                         {
-                            Console.WriteLine("The following is a list of your guesses:");
-                            Console.WriteLine($" Guess #{guessCount}: {i[0]} {i[1]} {i[2]} {i[3]}");
+                            Console.WriteLine("\nThe following is a list of your guesses:");
+                            Console.WriteLine($" Guess #{guessCount}: {i[0]} {i[1]} {i[2]} {i[3]}\n");
                             guessCount++;
                         }
                         break;
