@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 using ConsoleCodeBreaker_Pegboard;
 
 namespace ConsoleCodeBreaker_Player
@@ -12,6 +13,8 @@ namespace ConsoleCodeBreaker_Player
         public List<int[]> GuessLog = new();
         public override void PlacePegs()
         {
+            //Regex guessFormat = new Regex(@"[0-4] [0-4] [0-4] [0-4]");
+            //Console.WriteLine(guessFormat.IsMatch("0 1 2 3"));
             Console.WriteLine("\nYou will need to 'place' your guesses one at a time.\n");
             for(int i = 0; i < Pegs.Length; i++)
             {

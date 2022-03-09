@@ -48,7 +48,6 @@ correct code that the opponent made.";
                         break;
                     case "P":
                         player.PlacePegs();
-                        
                         CodeCheck(player, opponent);
                         break;
                     case "C":
