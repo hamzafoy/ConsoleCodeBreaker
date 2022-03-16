@@ -37,16 +37,6 @@ namespace ConsoleCodeBreaker_Player
                     Console.WriteLine("Your input is unacceptable, try again!");
                 }
             } while (pegAttempt == 0);
-            //Console.WriteLine("\nYou will need to 'place' your guesses one at a time.\n");
-            //for(int i = 0; i < Pegs.Length; i++)
-            //{
-            //    string userInput = Console.ReadLine();
-            //    userInput = (!String.IsNullOrEmpty(userInput)) ? userInput : "0";
-            //    Int32.TryParse(userInput, out Pegs[i]);
-            //    Console.SetCursorPosition(0, Console.CursorTop - 1);
-            //    Console.Write(' ');
-            //    Console.SetCursorPosition(0, Console.CursorTop);
-            //}
         }
     }
 }
