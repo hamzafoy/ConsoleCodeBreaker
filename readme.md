@@ -1,0 +1,72 @@
+ 
+## Table of Contents
+
+1. [Installation Instructions](#id-section1)
+
+2. [Capstone Requirements](#id-section2)
+
+3. [General Information about the App](#id-section3)
+
+4. [Miscellaneous](#id-section4)
+
+  
+
+<hr>
+
+  
+
+<div  id='id-section1'/>
+
+  
+
+### Installation Instructions
+
+*The following are instructions, in accordance with the Code Louisville's Software Development [C#] Capstone Project requirements, on how to install this application.*
+
+  
+
+* **To be completed**
+
+<hr>
+
+  
+
+<div  id='id-section2'/>
+
+  
+
+### Capstone Requirements
+
+*The following is a detailed section indicating where project requirements are met in the repository & application.*
+
+
+
+<hr>
+
+<div  id='id-section3'/>
+
+  
+
+### General Information about the Application
+
+*This application is intended for general use & is a fun console-version of the Mastermind board game.*
+
+This application is programmed using **`C#`**. This application utilizes a number of *Collections* including arrays & lists and also utilizes *regular expressions* (RegEx).
+
+  
+
+>  **Room for Improvement**
+
+>  * Need to print a message to user upon successfully completing a round of Mastermind detailing how many guesses the user took to guess the computer's code-row correctly.
+
+>  * Need to store game history to an external file.
+
+<hr>
+
+<div  id='id-section4'/>
+
+  
+
+### Miscellaneous
+
+**To be completed**
