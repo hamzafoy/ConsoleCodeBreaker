@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using ConsoleCodeBreaker_Opponent;
 
 namespace ConsoleCodeBreaker_HistoryWriter
 {
@@ -22,14 +23,12 @@ namespace ConsoleCodeBreaker_HistoryWriter
             }
             return _instance;
         }
-        public void WriteToFile()
+        public void WriteToFile(int[] pegRow, int guessCount)
         {
-            string[] lines = { "Test #1", "Test #2", "Test #3", "Test #4", "Test #5" };
             string documentPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            using (StreamWriter outputFile = new StreamWriter(Path.Combine(documentPath, "TestFile.txt")))
+            using (StreamWriter outputFile = new StreamWriter(Path.Combine(documentPath, "ConsoleCodeBreakerLogs.txt"), true))
             {
-                foreach (string line in lines)
-                    outputFile.WriteLine(line);
+                outputFile.WriteLine($"Computer's Code: [ {pegRow[0]} {pegRow[1]} {pegRow[2]} {pegRow[3]} ], # of Guesses to Break: {guessCount}");
             }
         }
     }
