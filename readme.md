@@ -63,7 +63,7 @@ This application is programmed using **`C#`**. This application utilizes a numbe
 
 >  **Room for Improvement**
 
->  * Need to print a message to user upon successfully completing a round of Mastermind detailing how many guesses the user took to guess the computer's code-row correctly.
+>  * Need to print a message to user upon successfully completing a round of Mastermind detailing how many guesses the user took to guess the computer's code-row correctly. &radic;
 
 >  * Need to store game history to an external file.
 

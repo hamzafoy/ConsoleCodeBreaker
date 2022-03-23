@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ConsoleCodeBreaker_Player;
 using ConsoleCodeBreaker_Opponent;
+using ConsoleCodeBreaker_HistoryWriter;
 
 namespace ConsoleCodeBreaker_GameConsole
 {
@@ -81,6 +82,8 @@ correct code that the opponent made.";
         }
         public static void StartUp()
         {
+            HistoryWriter hist = HistoryWriter.GetInstance();
+            hist.WriteToFile();
             Console.WriteLine($"|******************************************************|");
             Console.WriteLine($"|*************|                          |*************|");
             Console.WriteLine($"|*************| :: Console Mastermind :: |*************|");
