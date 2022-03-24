@@ -34,7 +34,7 @@ correct code that the opponent made.";
                 if (opponent.Feedback.Count > 0 && opponent.Feedback[opponent.Feedback.Count - 1][0] == "+" && opponent.Feedback[opponent.Feedback.Count - 1][1] == "+" && opponent.Feedback[opponent.Feedback.Count - 1][2] == "+" && opponent.Feedback[opponent.Feedback.Count - 1][3] == "+")
                 {
                     Console.WriteLine($"You have successfully guessed the correct numbers and positions of said numbers! Good Job! \nIt took you {player.GuessLog.Count} guesses! Game closing. . .");
-                    gameLog.WriteToFile(opponent.Pegs, player.GuessLog.Count, player.GuessLog);
+                    gameLog.WriteToFile(opponent.Pegs, player.GuessLog.Count, player.GuessLog, opponent.Feedback);
                     break;
                 }
                 if (player.GuessLog.Count == 10)
