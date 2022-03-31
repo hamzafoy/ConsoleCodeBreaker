@@ -27,6 +27,7 @@ correct code that the opponent made.";
         public static void PlayGame()
         {
             StartUp();
+            opponent.PlacePegs();
             HistoryWriter gameLog = HistoryWriter.GetInstance();
             string userInput = null;
             do
@@ -35,12 +36,39 @@ correct code that the opponent made.";
                 {
                     Console.WriteLine($"You have successfully guessed the correct numbers and positions of said numbers! Good Job! \nIt took you {player.GuessLog.Count} guesses! Game closing. . .");
                     gameLog.WriteToFile(opponent.Pegs, player.GuessLog.Count, player.GuessLog, opponent.Feedback);
-                    break;
+                    Console.WriteLine("Would you like to play again? Y or N");
+                    //opponent.PlacePegs();
+                    string confirmation = Console.ReadLine();
+                    if (confirmation == "N" || confirmation == "n")
+                    {
+                        break;
+                    }
+                    else if (confirmation == "Y" || confirmation == null)
+                    {
+                        opponent.PlacePegs();
+                        opponent.Feedback = new List<string[]>();
+                        player.GuessLog = new List<int[]>();
+                        Console.Clear();
+                    }
                 }
                 if (player.GuessLog.Count == 10)
                 {
                     Console.WriteLine("You have played 10 guesses and failed to crack the code. You Lose! \nGame closing. . .");
-                    break;
+                    Console.WriteLine("Would you like to play again? Y or N");
+                    //opponent.PlacePegs();
+                    string confirmation = Console.ReadLine();
+                    if (confirmation == "N" || confirmation == "n")
+                    {
+                        break;
+                    }
+                    else if (confirmation == "Y" || confirmation == null)
+                    {
+                        opponent.PlacePegs();
+                        opponent.Feedback = new List<string[]>();
+                        player.GuessLog = new List<int[]>();
+                        Console.Clear();
+                    }
+                    //break;
                 }
                 Console.Write("Enter P to play, enter C to erase \nthe console & keep playing, enter V to view \nyour previous guesses, & enter Q to quit: ");
                 userInput = Console.ReadLine().ToUpper();
