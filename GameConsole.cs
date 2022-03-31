@@ -87,8 +87,9 @@ correct code that the opponent made.";
                             Console.SetCursorPosition(0, i);
                             Console.WriteLine(new String(' ', Console.WindowWidth));
                         }
-                        Console.SetCursorPosition(0, 8);
-                        Console.SetWindowPosition(0, 0);
+                        //Console.SetCursorPosition(0, 8);
+                        //Console.SetWindowPosition(0, 0);
+                        Console.Clear();
                         break;
                     case "V":
                         int guessCount = 1;
