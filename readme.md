@@ -23,9 +23,7 @@
 
 *The following are instructions, in accordance with the Code Louisville's Software Development [C#] Capstone Project requirements, on how to install this application.*
 
-  
-
-* **To be completed**
+* *This application is developed with `.NET 6.0`. The `.txt` log file that logs each game's results are stored in your `Documents` folder.*
 
 <hr>
 
@@ -40,12 +38,25 @@
 *The following is a detailed section indicating where project requirements are met in the repository & application.*
 
 * Has at least **5** commits on GitHub. All commits have been made directly through **Visual Studio**. &radic;
+
 * Has a **`readme.md`** file containing a paragraph+ describing the application, the capstone requirements met, & installation instructions. &radic;
+
 * Has at least one class & at least one object of that class populated with data. Data must be used or displayed in the application. &radic;
 `Line 13 & 14 in GameConsole.cs will have a Player & Opponent object created from the respective classes. Data from the Player object is used and displayed in the application.`
+
 * Has at least 3 functions or methods with at least one returning a value that is used in the application. &radic;
 
-* 
+* **Implement a “master loop” console application where the user can repeatedly enter commands/perform actions, including choosing to exit the program**
+
+* **Create an additional class which inherits one or more properties from its parent**
+`Player.cs & Opponent.cs inherit from Pegboard.cs with a Pegs property & a PlacePegs() method.`
+
+* **Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program**
+
+* **Implement a log that records errors, invalid inputs, or other important events and writes them to a text file**
+
+* **Implement a regular expression (regex) to ensure a field either a phone number or an email address is always stored and displayed in the same format**
+`RegEx contained in Player.cs to ensure player's input follows the same format.`
 
 <hr>
 
@@ -65,7 +76,7 @@ This application is programmed using **`C#`**. This application utilizes a numbe
 
 >  * Need to print a message to user upon successfully completing a round of Mastermind detailing how many guesses the user took to guess the computer's code-row correctly. &radic;
 
->  * Need to store game history to an external file.
+>  * Need to store game history to an external file. &radic;
 
 <hr>
 
@@ -74,5 +85,3 @@ This application is programmed using **`C#`**. This application utilizes a numbe
   
 
 ### Miscellaneous
-
-**To be completed**
