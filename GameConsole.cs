@@ -102,7 +102,7 @@ correct code that the opponent made.";
                         }
                         break;
                     default:
-                        Console.WriteLine("This input is not accepted. Try again and follow the prompt");
+                        Console.WriteLine("\nThis input is not accepted. Try again and follow the prompt\n");
                         break;
                 }
                 if (userInput == "Q" || userInput == "q")
